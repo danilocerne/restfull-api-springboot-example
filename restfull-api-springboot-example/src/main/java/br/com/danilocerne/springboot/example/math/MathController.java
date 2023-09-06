@@ -12,8 +12,6 @@ import br.com.danilocerne.springboot.example.exceptions.UnsupportedMathOperation
 @RestController
 public class MathController {
 
-	private final AtomicLong counter = new AtomicLong();
-
 	@RequestMapping(value = "/sum/{numberOne}/{numberTwo}", method = RequestMethod.GET)
 	public Double sum(
 			@PathVariable(value = "numberOne") String numberOne,
