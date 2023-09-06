@@ -1,10 +1,12 @@
-package br.com.danilocerne.springboot.example.greeting;
+package br.com.danilocerne.springboot.example.greeting.controllers;
 
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import br.com.danilocerne.springboot.example.greeting.Greeting;
 
 @RestController
 public class GreetingController {
