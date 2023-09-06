@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "cdd88f5f-3afa-406e-94b8-00bf7b8c264a",
+		"name": "api-springboot-example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28149798"
+	},
+	"item": [
+		{
+			"name": "sum",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sum/1.1/3,0a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sum",
+						"1.1",
+						"3,0a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "subtraction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/subtraction/1.1/1,1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subtraction",
+						"1.1",
+						"1,1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "multiplication",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/multiplication/1/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"multiplication",
+						"1",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "division",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/division/6/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"division",
+						"6",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mean",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/mean/5/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mean",
+						"5",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "square-root",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/squareRoot/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"squareRoot",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "greeting-default-value",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/greeting",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"greeting"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "greeting-customized-value",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/greeting?name=Danilo Cerne",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"greeting"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Danilo Cerne"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
