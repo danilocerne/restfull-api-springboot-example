@@ -1,0 +1,7 @@
+package br.com.danilocerne.springboot.example.models;
+
+import java.io.Serializable;
+
+public class Person implements Serializable{
+	
+}
