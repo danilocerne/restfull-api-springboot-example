@@ -1,5 +1,0 @@
-package br.com.danilocerne.springboot.example.greeting;
-
-public class GreetingController {
-
-}
