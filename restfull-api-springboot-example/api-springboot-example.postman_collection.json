@@ -55,7 +55,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"firstName\": \"Person name 0\",\n    \"lastName\": \"Last name 0\",\n    \"address\": \"Some address in Brazil 0\",\n    \"gender\": \"Masculino\"\n  }",
+							"raw": "{\n    \"firstName\": \"Marco\",\n    \"lastName\": \"Aurélio Cerne\",\n    \"address\": \"Uberlândia\",\n    \"gender\": \"Male\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -83,7 +83,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": \"1\",\n    \"firstName\": \"Person name 0\",\n    \"lastName\": \"Last name 0\",\n    \"address\": \"Some address in Brazil 0\",\n    \"gender\": \"Masculino\"\n  }",
+							"raw": "{\n    \"id\": 4,\n    \"firstName\": \"Milena\",\n    \"lastName\": \"Cerne Villena\",\n    \"address\": \"Ribeirão Preto\",\n    \"gender\": \"Female\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -110,7 +110,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/person/1",
+							"raw": "http://localhost:8080/person/8",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -118,7 +118,7 @@
 							"port": "8080",
 							"path": [
 								"person",
-								"1"
+								"8"
 							]
 						}
 					},
