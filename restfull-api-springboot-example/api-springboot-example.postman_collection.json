@@ -10,9 +10,104 @@
 			"name": "crud-example",
 			"item": [
 				{
-					"name": "person",
+					"name": "all-person",
 					"request": {
 						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/person",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "id-person",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/person/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-person",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Person name 0\",\n    \"lastName\": \"Last name 0\",\n    \"address\": \"Some address in Brazil 0\",\n    \"gender\": \"Masculino\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/person",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-person",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"1\",\n    \"firstName\": \"Person name 0\",\n    \"lastName\": \"Last name 0\",\n    \"address\": \"Some address in Brazil 0\",\n    \"gender\": \"Masculino\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/person",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-person",
+					"request": {
+						"method": "DELETE",
 						"header": [],
 						"url": {
 							"raw": "http://localhost:8080/person/1",
