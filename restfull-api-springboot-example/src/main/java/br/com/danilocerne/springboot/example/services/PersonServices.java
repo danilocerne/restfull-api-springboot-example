@@ -32,17 +32,6 @@ public class PersonServices {
 				.orElseThrow(() -> new ResourceNotFoundException("No records found for this ID!"));
 	}
 	
-//	private Person mockPerson(int i) {
-//		
-//		Person person = new Person();
-//		person.setId(counter.incrementAndGet());
-//		person.setFirstName("Person name " + i);
-//		person.setLastName("Last name " + i);
-//		person.setAddress("Some address in Brazil " + i);
-//		person.setGender("Masculino");
-//		return person;
-//	}
-	
 	public Person create(Person person) {
 		
 		logger.info("Creating one person!");
