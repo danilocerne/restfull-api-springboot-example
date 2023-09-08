@@ -1,4 +1,4 @@
-package br.com.danilocerne.springboot.example.converters;
+package br.com.danilocerne.springboot.example.converter;
 
 public class NumberConverter {
 	

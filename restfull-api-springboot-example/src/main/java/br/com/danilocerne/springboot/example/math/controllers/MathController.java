@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.danilocerne.springboot.example.converters.NumberConverter;
+import br.com.danilocerne.springboot.example.converter.NumberConverter;
 import br.com.danilocerne.springboot.example.exceptions.ResourceNotFoundException;
 import br.com.danilocerne.springboot.example.math.SimpleMath;
 
