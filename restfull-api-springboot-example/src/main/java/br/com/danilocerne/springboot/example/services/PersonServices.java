@@ -6,9 +6,11 @@ import java.util.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.danilocerne.springboot.example.data.vo.PersonVO;
-import br.com.danilocerne.springboot.example.exceptions.ResourceNotFoundException;
 import br.com.danilocerne.springboot.example.converter.DozerConverter;
+import br.com.danilocerne.springboot.example.data.vo.v1.PersonVO;
+import br.com.danilocerne.springboot.example.data.vo.v2.PersonVOV2;
+import br.com.danilocerne.springboot.example.exceptions.ResourceNotFoundException;
+import br.com.danilocerne.springboot.example.mapper.custom.PersonMapper;
 import br.com.danilocerne.springboot.example.models.Person;
 import br.com.danilocerne.springboot.example.repositories.PersonRepository;
 
@@ -19,6 +21,9 @@ public class PersonServices {
 	
 	@Autowired
 	PersonRepository repository;
+	
+	@Autowired
+	PersonMapper mapper;
 	
 	public List<PersonVO> findAll() {
 		logger.info("Finding all people!");
@@ -41,6 +46,15 @@ public class PersonServices {
 		
 		var entity = DozerConverter.parseObject(person, Person.class);
 		var vo = DozerConverter.parseObject(repository.save(entity), PersonVO.class);
+		return vo;
+	}
+	
+	public PersonVOV2 createV2(PersonVOV2 person) {
+		
+		logger.info("Creating one person with V2!");
+		
+		var entity = mapper.convertVOToEntity(person);
+		var vo = mapper.convertEntityToVO(repository.save(entity));
 		return vo;
 	}
 	

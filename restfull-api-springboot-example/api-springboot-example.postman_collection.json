@@ -55,7 +55,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"firstName\": \"Marco\",\n    \"lastName\": \"Aurélio Cerne\",\n    \"address\": \"Uberlândia\",\n    \"gender\": \"Male\"\n}",
+							"raw": "{\n    \"firstName\": \"Cristina\",\n    \"lastName\": \"Cerne dos Cerne\",\n    \"address\": \"Ribeirão Preto\",\n    \"gender\": \"Female\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -77,13 +77,42 @@
 					"response": []
 				},
 				{
+					"name": "create-person-v2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Cristina\",\n    \"lastName\": \"Cerne dos Cerne\",\n    \"birthDay\": \"1979-01-11\",\n    \"address\": \"Ribeirão Preto\",\n    \"gender\": \"Female\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/person/v2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person",
+								"v2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "update-person",
 					"request": {
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 4,\n    \"firstName\": \"Milena\",\n    \"lastName\": \"Cerne Villena\",\n    \"address\": \"Ribeirão Preto\",\n    \"gender\": \"Female\"\n}",
+							"raw": "{\n    \"id\": 9,\n    \"firstName\": \"Cristina\",\n    \"lastName\": \"Cerne dos Cerne\",\n    \"address\": \"Ribeirão Preto\",\n    \"gender\": \"Female\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -110,7 +139,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/person/8",
+							"raw": "http://localhost:8080/person/9",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -118,7 +147,7 @@
 							"port": "8080",
 							"path": [
 								"person",
-								"8"
+								"9"
 							]
 						}
 					},

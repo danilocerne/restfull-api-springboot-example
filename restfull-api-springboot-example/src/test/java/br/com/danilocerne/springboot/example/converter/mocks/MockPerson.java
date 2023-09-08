@@ -3,7 +3,7 @@ package br.com.danilocerne.springboot.example.converter.mocks;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.danilocerne.springboot.example.data.vo.PersonVO;
+import br.com.danilocerne.springboot.example.data.vo.v1.PersonVO;
 import br.com.danilocerne.springboot.example.models.Person;
 
 public class MockPerson {

@@ -1,9 +1,10 @@
-package br.com.danilocerne.springboot.example.data.vo;
+package br.com.danilocerne.springboot.example.data.vo.v2;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.Objects;
 
-public class PersonVO implements Serializable{
+public class PersonVOV2 implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
@@ -17,7 +18,9 @@ public class PersonVO implements Serializable{
 	
 	private String gender;
 	
-	public PersonVO() {}
+	private Date birthDay;
+	
+	public PersonVOV2() {}
 
 	public Long getId() {
 		return id;
@@ -59,9 +62,17 @@ public class PersonVO implements Serializable{
 		this.gender = gender;
 	}
 
+	public Date getBirthDay() {
+		return birthDay;
+	}
+
+	public void setBirthDay(Date birthDay) {
+		this.birthDay = birthDay;
+	}
+
 	@Override
 	public int hashCode() {
-		return Objects.hash(address, firstName, gender, id, lastName);
+		return Objects.hash(address, birthDay, firstName, gender, id, lastName);
 	}
 
 	@Override
@@ -72,10 +83,10 @@ public class PersonVO implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		PersonVO other = (PersonVO) obj;
-		return Objects.equals(address, other.address) && Objects.equals(firstName, other.firstName)
-				&& Objects.equals(gender, other.gender) && Objects.equals(id, other.id)
-				&& Objects.equals(lastName, other.lastName);
+		PersonVOV2 other = (PersonVOV2) obj;
+		return Objects.equals(address, other.address) && Objects.equals(birthDay, other.birthDay)
+				&& Objects.equals(firstName, other.firstName) && Objects.equals(gender, other.gender)
+				&& Objects.equals(id, other.id) && Objects.equals(lastName, other.lastName);
 	}
 	
 }

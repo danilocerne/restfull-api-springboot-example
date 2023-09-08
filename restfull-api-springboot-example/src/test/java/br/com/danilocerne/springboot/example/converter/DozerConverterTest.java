@@ -7,7 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import br.com.danilocerne.springboot.example.converter.mocks.MockPerson;
-import br.com.danilocerne.springboot.example.data.vo.PersonVO;
+import br.com.danilocerne.springboot.example.data.vo.v1.PersonVO;
 import br.com.danilocerne.springboot.example.models.Person;
 
 public class DozerConverterTest {
