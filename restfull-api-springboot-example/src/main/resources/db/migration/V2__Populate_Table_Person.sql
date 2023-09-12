@@ -1,0 +1,1 @@
+INSERT INTO `restfull_api_springboot_example`.`person` VALUES (1,'Ayrton','Senna','São Paulo','Male'),(2,'Danilo','Cerne','Ribeirão Preto','Male'),(3,'Marilene','Chicarelli Cerne','Ribeirão Preto','Female'),(4,'Milena','Cerne Villena','Ribeirão Preto','Female'),(5,'Cristina','Cerne dos Santos','Ribeirão Preto','Female');
