@@ -3,18 +3,28 @@ package br.com.danilocerne.springboot.example.data.vo.v1;
 import java.io.Serializable;
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonPropertyOrder({"id", "nome", "sobrenome", "genero", "endereco"})
 public class PersonVO implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
 	private Long id;
 	
+	@JsonProperty("nome")
 	private String firstName;
 	
+	@JsonProperty("sobrenome")
 	private String lastName;
 	
+	@JsonProperty("endereco")
 	private String address;
 	
+	@JsonIgnore
+	@JsonProperty("genero")
 	private String gender;
 	
 	public PersonVO() {}
