@@ -17,12 +17,21 @@ public class WebConfig implements WebMvcConfigurer{
 		// Via QUERY PARAM. http://localhost:8080/api/person?mediaType=json
 		// Via QUERY PARAM. http://localhost:8080/api/person?mediaType=yml
 		
-		configurer.favorParameter(true)
+		/* Via QUERY PARAM:
+		 * configurer.favorParameter(true)
 			.parameterName("mediaType").ignoreAcceptHeader(true)
 			.useRegisteredExtensionsOnly(false)
 			.defaultContentType(MediaType.APPLICATION_JSON)
 				.mediaType("json", MediaType.APPLICATION_JSON)
-				.mediaType("xml", MediaType.APPLICATION_XML);
+				.mediaType("xml", MediaType.APPLICATION_XML);*/
+		
+		// Via HEADER PARAM:
+		configurer.favorParameter(false)
+		.parameterName("mediaType").ignoreAcceptHeader(false)
+		.useRegisteredExtensionsOnly(false)
+		.defaultContentType(MediaType.APPLICATION_JSON)
+			.mediaType("json", MediaType.APPLICATION_JSON)
+			.mediaType("xml", MediaType.APPLICATION_XML);
 	}
 	
 }
