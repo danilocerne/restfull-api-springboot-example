@@ -29,6 +29,31 @@
 					"response": []
 				},
 				{
+					"name": "all-person-json-for-query-param",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/person?mediaType=json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person"
+							],
+							"query": [
+								{
+									"key": "mediaType",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "all-person-xml-for-query-param",
 					"request": {
 						"method": "GET",
@@ -48,6 +73,59 @@
 									"key": "mediaType",
 									"value": "xml"
 								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all-person-yaml-for-query-param",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/person?mediaType=yaml",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person"
+							],
+							"query": [
+								{
+									"key": "mediaType",
+									"value": "yaml"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all-person-json-for-header-param",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/person",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person"
 							]
 						}
 					},
@@ -82,32 +160,7 @@
 					"response": []
 				},
 				{
-					"name": "all-person-json-for-query-param",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/person?mediaType=json",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"person"
-							],
-							"query": [
-								{
-									"key": "mediaType",
-									"value": "json"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "all-person-json-for-header-param",
+					"name": "all-person-yaml-for-header-param",
 					"protocolProfileBehavior": {
 						"disabledSystemHeaders": {}
 					},
@@ -116,7 +169,7 @@
 						"header": [
 							{
 								"key": "Accept",
-								"value": "application/xml",
+								"value": "application/x-yaml",
 								"type": "text"
 							}
 						],
@@ -155,32 +208,6 @@
 					"response": []
 				},
 				{
-					"name": "id-person-xml",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/person/1?mediaType=xml",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"person",
-								"1"
-							],
-							"query": [
-								{
-									"key": "mediaType",
-									"value": "xml"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "id-person-json",
 					"request": {
 						"method": "GET",
@@ -207,16 +234,81 @@
 					"response": []
 				},
 				{
+					"name": "id-person-xml",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/person/1?mediaType=xml",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person",
+								"1"
+							],
+							"query": [
+								{
+									"key": "mediaType",
+									"value": "xml"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "create-person",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"firstName\": \"Cristina\",\n    \"lastName\": \"Cerne dos Cerne\",\n    \"address\": \"Ribeirão Preto\",\n    \"gender\": \"Female\"\n}",
+							"raw": "{\n    \"nome\": \"Cristina\",\n    \"sobrenome\": \"Cerne dos Cerne\",\n    \"endereco\": \"Ribeirão Preto\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/person",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-person-for-yaml",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/x-yaml",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-yaml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "---\nnome: \"Daniela\"\nsobrenome: \"Santos\"\nendereco: \"São Paulo\"",
+							"options": {
+								"raw": {
+									"language": "text"
 								}
 							}
 						},
@@ -270,7 +362,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 6,\n    \"firstName\": \"Cristina \",\n    \"lastName\": \"Cerne dos Cerne\",\n    \"address\": \"Ribeirão Preto\",\n    \"gender\": \"Female\"\n}",
+							"raw": "{\n    \"id\": 6,\n    \"nome\": \"Cristina\",\n    \"sobrenome\": \"Cerne dos Cerne\",\n    \"endereco\": \"Ribeirão Preto / SP\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
