@@ -29,6 +29,84 @@
 					"response": []
 				},
 				{
+					"name": "all-person-xml-for-query-param",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/person?mediaType=xml",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person"
+							],
+							"query": [
+								{
+									"key": "mediaType",
+									"value": "xml"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all-person-xml-for-header-param",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/person",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all-person-json",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/person?mediaType=json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person"
+							],
+							"query": [
+								{
+									"key": "mediaType",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "id-person",
 					"request": {
 						"method": "GET",
@@ -43,6 +121,58 @@
 							"path": [
 								"person",
 								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "id-person-xml",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/person/1?mediaType=xml",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person",
+								"1"
+							],
+							"query": [
+								{
+									"key": "mediaType",
+									"value": "xml"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "id-person-json",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/person/1?mediaType=json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person",
+								"1"
+							],
+							"query": [
+								{
+									"key": "mediaType",
+									"value": "json"
+								}
 							]
 						}
 					},
@@ -112,7 +242,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 9,\n    \"firstName\": \"Cristina\",\n    \"lastName\": \"Cerne dos Cerne\",\n    \"address\": \"Ribeirão Preto\",\n    \"gender\": \"Female\"\n}",
+							"raw": "{\n    \"id\": 6,\n    \"firstName\": \"Cristina \",\n    \"lastName\": \"Cerne dos Cerne\",\n    \"address\": \"Ribeirão Preto\",\n    \"gender\": \"Female\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -139,7 +269,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/person/9",
+							"raw": "http://localhost:8080/person/6",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -147,7 +277,7 @@
 							"port": "8080",
 							"path": [
 								"person",
-								"9"
+								"6"
 							]
 						}
 					},
