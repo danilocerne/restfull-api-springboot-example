@@ -82,7 +82,7 @@
 					"response": []
 				},
 				{
-					"name": "all-person-json",
+					"name": "all-person-json-for-query-param",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -101,6 +101,34 @@
 									"key": "mediaType",
 									"value": "json"
 								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all-person-json-for-header-param",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/person",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person"
 							]
 						}
 					},
