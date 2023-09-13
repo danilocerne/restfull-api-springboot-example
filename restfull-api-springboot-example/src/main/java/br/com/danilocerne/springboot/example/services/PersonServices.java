@@ -31,7 +31,11 @@ public class PersonServices {
 	public List<PersonVO> findAll() {
 		logger.info("Finding all people!");
 		
-		return DozerConverter.parseListObjects(repository.findAll(), PersonVO.class);
+		var persons = DozerConverter.parseListObjects(repository.findAll(), PersonVO.class);
+		persons
+			.stream()
+			.forEach(p -> p.add(linkTo(methodOn(PersonController.class).findById(p.getKey())).withSelfRel()));
+		return persons;
 	}
 	
 	public PersonVO findById(Long id) {
@@ -40,7 +44,7 @@ public class PersonServices {
 	
 		var entity = repository.findById(id)
 				.orElseThrow(() -> new ResourceNotFoundException("No records found for this ID!"));
-		PersonVO vo = DozerConverter.parseObject(entity, PersonVO.class);
+		var vo = DozerConverter.parseObject(entity, PersonVO.class);
 		vo.add(linkTo(methodOn(PersonController.class).findById(id)).withSelfRel());
 		return vo;
 	}
@@ -51,6 +55,7 @@ public class PersonServices {
 		
 		var entity = DozerConverter.parseObject(person, Person.class);
 		var vo = DozerConverter.parseObject(repository.save(entity), PersonVO.class);
+		vo.add(linkTo(methodOn(PersonController.class).findById(vo.getKey())).withSelfRel());
 		return vo;
 	}
 	
@@ -76,6 +81,7 @@ public class PersonServices {
 		entity.setGender(person.getGender());
 		
 		var vo = DozerConverter.parseObject(repository.save(entity), PersonVO.class);
+		vo.add(linkTo(methodOn(PersonController.class).findById(vo.getKey())).withSelfRel());
 		return vo;
 	}
 	
