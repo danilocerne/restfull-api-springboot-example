@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.danilocerne.springboot.example.data.vo.v1.PersonVO;
+import br.com.danilocerne.springboot.example.data.vo.v2.PersonVOV2;
 import br.com.danilocerne.springboot.example.models.Person;
 
 public class MockPerson {
@@ -43,12 +44,22 @@ public class MockPerson {
         return person;
     }
 
-    private PersonVO mockVO(Integer number) {
+    public PersonVO mockVO(Integer number) {
     	PersonVO person = new PersonVO();
     	person.setAddress("Address Test" + number);
         person.setFirstName("First Name Test" + number);
         person.setGender(((number % 2)==0) ? "Male" : "Female");
         person.setKey(number.longValue());
+        person.setLastName("Last Name Test" + number);
+        return person;
+    }
+    
+    public PersonVOV2 mockVOV2(Integer number) {
+    	PersonVOV2 person = new PersonVOV2();
+    	person.setAddress("Address Test" + number);
+        person.setFirstName("First Name Test" + number);
+        person.setGender(((number % 2)==0) ? "Male" : "Female");
+        person.setId(number.longValue());
         person.setLastName("Last Name Test" + number);
         return person;
     }
