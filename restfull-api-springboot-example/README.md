@@ -8,3 +8,9 @@ The Flyway plugin is configured in the Spring Boot project and the following com
 mvn clean package spring-boot:run
 mvn clean package spring-boot:run -DskipTests
 mvn flyway:migrate
+
+# Swagger V3 API-DOCS:
+http://localhost:8080/v3/api-docs
+
+# Swagger UI:
+http://localhost:8080/swagger-ui/index.html
