@@ -15,14 +15,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/person",
+							"raw": "http://localhost:8080/api/person/v1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"person"
+								"api",
+								"person",
+								"v1"
 							]
 						}
 					},
@@ -34,14 +36,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/person?mediaType=json",
+							"raw": "http://localhost:8080/api/person/v1?mediaType=json",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"person"
+								"api",
+								"person",
+								"v1"
 							],
 							"query": [
 								{
@@ -59,14 +63,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/person?mediaType=xml",
+							"raw": "http://localhost:8080/api/person/v1?mediaType=xml",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"person"
+								"api",
+								"person",
+								"v1"
 							],
 							"query": [
 								{
@@ -84,14 +90,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/person?mediaType=yaml",
+							"raw": "http://localhost:8080/api/person/v1?mediaType=yaml",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"person"
+								"api",
+								"person",
+								"v1"
 							],
 							"query": [
 								{
@@ -118,14 +126,16 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8080/person",
+							"raw": "http://localhost:8080/api/person/v1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"person"
+								"api",
+								"person",
+								"v1"
 							]
 						}
 					},
@@ -146,14 +156,16 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8080/person",
+							"raw": "http://localhost:8080/api/person/v1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"person"
+								"api",
+								"person",
+								"v1"
 							]
 						}
 					},
@@ -174,14 +186,16 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8080/person",
+							"raw": "http://localhost:8080/api/person/v1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"person"
+								"api",
+								"person",
+								"v1"
 							]
 						}
 					},
@@ -193,15 +207,17 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/person/1",
+							"raw": "http://localhost:8080/api/person/v1/3",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
+								"api",
 								"person",
-								"1"
+								"v1",
+								"3"
 							]
 						}
 					},
@@ -213,15 +229,17 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/person/1?mediaType=json",
+							"raw": "http://localhost:8080/api/person/v1/3?mediaType=json",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
+								"api",
 								"person",
-								"1"
+								"v1",
+								"3"
 							],
 							"query": [
 								{
@@ -239,15 +257,17 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/person/1?mediaType=xml",
+							"raw": "http://localhost:8080/api/person/v1/3?mediaType=xml",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
+								"api",
 								"person",
-								"1"
+								"v1",
+								"3"
 							],
 							"query": [
 								{
@@ -266,7 +286,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"nome\": \"Cristina\",\n    \"sobrenome\": \"Cerne dos Cerne\",\n    \"endereco\": \"Ribeirão Preto\"\n}",
+							"raw": "{\n    \"nome\": \"Raul\",\n    \"sobrenome\": \"Cerne dos Cerne\",\n    \"endereco\": \"Ribeirão Preto\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -274,14 +294,16 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/person",
+							"raw": "http://localhost:8080/api/person/v1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"person"
+								"api",
+								"person",
+								"v1"
 							]
 						}
 					},
@@ -305,7 +327,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "---\nnome: \"Daniela\"\nsobrenome: \"Santos\"\nendereco: \"São Paulo\"",
+							"raw": "---\nnome: \"Matias\"\nsobrenome: \"Santos\"\nendereco: \"São Paulo\"",
 							"options": {
 								"raw": {
 									"language": "text"
@@ -313,14 +335,16 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/person",
+							"raw": "http://localhost:8080/api/person/v1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"person"
+								"api",
+								"person",
+								"v1"
 							]
 						}
 					},
@@ -333,7 +357,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"firstName\": \"Cristina\",\n    \"lastName\": \"Cerne dos Cerne\",\n    \"birthDay\": \"1979-01-11\",\n    \"address\": \"Ribeirão Preto\",\n    \"gender\": \"Female\"\n}",
+							"raw": "{\n    \"firstName\": \"Fonseca\",\n    \"lastName\": \"Cerne dos Cerne\",\n    \"birthDay\": \"1979-01-11\",\n    \"address\": \"Ribeirão Preto\",\n    \"gender\": \"Female\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -341,14 +365,16 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/person/v2",
+							"raw": "http://localhost:8080/api/person/v1/v2",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
+								"api",
 								"person",
+								"v1",
 								"v2"
 							]
 						}
@@ -362,7 +388,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\": 6,\n    \"nome\": \"Cristina\",\n    \"sobrenome\": \"Cerne dos Cerne\",\n    \"endereco\": \"Ribeirão Preto / SP\"\n}",
+							"raw": "{\n    \"id\": 1,\n    \"nome\": \"Cristina\",\n    \"sobrenome\": \"Cerne dos Cerne\",\n    \"endereco\": \"Ribeirão Preto / SP\",\n    \"genero\": \"Femino\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -370,14 +396,16 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/person",
+							"raw": "http://localhost:8080/api/person/v1",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"person"
+								"api",
+								"person",
+								"v1"
 							]
 						}
 					},
@@ -389,15 +417,17 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/person/6",
+							"raw": "http://localhost:8080/api/person/v1/3",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
+								"api",
 								"person",
-								"6"
+								"v1",
+								"3"
 							]
 						}
 					},
