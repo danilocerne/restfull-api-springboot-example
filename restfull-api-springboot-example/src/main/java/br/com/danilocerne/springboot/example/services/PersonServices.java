@@ -12,6 +12,7 @@ import br.com.danilocerne.springboot.example.controllers.PersonController;
 import br.com.danilocerne.springboot.example.converter.DozerConverter;
 import br.com.danilocerne.springboot.example.data.vo.v1.PersonVO;
 import br.com.danilocerne.springboot.example.data.vo.v2.PersonVOV2;
+import br.com.danilocerne.springboot.example.exceptions.RequiredObjectIsNullException;
 import br.com.danilocerne.springboot.example.exceptions.ResourceNotFoundException;
 import br.com.danilocerne.springboot.example.mapper.custom.PersonMapper;
 import br.com.danilocerne.springboot.example.models.Person;
@@ -51,6 +52,8 @@ public class PersonServices {
 	
 	public PersonVO create(PersonVO person) {
 		
+		if (person == null) throw new RequiredObjectIsNullException();
+		
 		logger.info("Creating one person!");
 		
 		var entity = DozerConverter.parseObject(person, Person.class);
@@ -61,6 +64,8 @@ public class PersonServices {
 	
 	public PersonVOV2 createV2(PersonVOV2 person) {
 		
+		if (person == null) throw new RequiredObjectIsNullException();
+		
 		logger.info("Creating one person with V2!");
 		
 		var entity = mapper.convertVOToEntity(person);
@@ -69,6 +74,8 @@ public class PersonServices {
 	}
 	
 	public PersonVO update(PersonVO person) {
+		
+		if (person == null) throw new RequiredObjectIsNullException();
 		
 		logger.info("Updating one person!");
 		
